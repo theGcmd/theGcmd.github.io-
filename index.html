@@ -639,6 +639,8 @@
     <div class="ticker-item">10 tasks avg accuracy <span class="val">98.0%</span></div>
     <div class="ticker-item">Network anomaly F1 <span class="val">1.000</span></div>
     <div class="ticker-item">Intel Lava compatible <span class="val">✓</span></div>
+    <div class="ticker-item">Context shifts detected <span class="val">3/3</span></div>
+    <div class="ticker-item">Task labels required <span class="val">0</span></div>
     <!-- repeat for seamless loop -->
     <div class="ticker-item">Split-MNIST accuracy <span class="val">98.2%</span></div>
     <div class="ticker-item">Beat EWC by <span class="val">32.7%</span></div>
@@ -672,6 +674,14 @@
     <div class="stat-card">
       <div class="stat-num amber">98.0%</div>
       <div class="stat-label">Average accuracy at 10 tasks<br>drops only 2% from 1 task</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num green">3/3</div>
+      <div class="stat-label">Context shifts detected<br>zero false positives</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num cyan">None</div>
+      <div class="stat-label">Task labels required<br>fully autonomous detection</div>
     </div>
   </div>
 
@@ -978,26 +988,5 @@
   });
 </script>
 
-    <div class="experiment-card" style="border-left: 4px solid #00ff88; padding: 1.5rem; margin: 1.5rem 0; background: rgba(0,255,136,0.05);">
-        <h3 style="color: #00ff88;">Context Mind — Task-Agnostic Continual Learning</h3>
-        <p style="color: #aaa;">
-            The open problem in continual learning. No task labels. No task heads. 
-            One shared output layer. The mind detects context shifts autonomously 
-            using dual-window change point detection with per-feature drift analysis.
-            Biological analogue: hippocampal context switching.
-        </p>
-        <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
-            <tr style="border-bottom: 1px solid #333;">
-                <th style="text-align:left; padding: 0.5rem; color:#888;">Metric</th>
-                <th style="text-align:left; padding: 0.5rem; color:#888;">Result</th>
-            </tr>
-            <tr><td style="padding:0.4rem; color:#ccc;">Shifts detected</td><td style="color:#00ff88; padding:0.4rem;">3/3 — perfect</td></tr>
-            <tr><td style="padding:0.4rem; color:#ccc;">False positives</td><td style="color:#00ff88; padding:0.4rem;">0</td></tr>
-            <tr><td style="padding:0.4rem; color:#ccc;">Missed shifts</td><td style="color:#00ff88; padding:0.4rem;">0</td></tr>
-            <tr><td style="padding:0.4rem; color:#ccc;">Forgetting</td><td style="color:#00ff88; padding:0.4rem;">−0.053 (performance improved)</td></tr>
-            <tr><td style="padding:0.4rem; color:#ccc;">Task labels required</td><td style="color:#00ff88; padding:0.4rem;">None</td></tr>
-            <tr><td style="padding:0.4rem; color:#ccc;">Detection latency</td><td style="color:#00ff88; padding:0.4rem;">1 step</td></tr>
-        </table>
-    </div>
 </body>
 </html>
